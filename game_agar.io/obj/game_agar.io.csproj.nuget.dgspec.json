@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\VisualStudio\\game_agar.io\\game_agar.io\\game_agar.io.csproj": {}
+    "D:\\Programming\\VisualStudio\\game_agar.io\\repozitoriy\\game_agar.io\\game_agar.io.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\VisualStudio\\game_agar.io\\game_agar.io\\game_agar.io.csproj": {
+    "D:\\Programming\\VisualStudio\\game_agar.io\\repozitoriy\\game_agar.io\\game_agar.io.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\VisualStudio\\game_agar.io\\game_agar.io\\game_agar.io.csproj",
+        "projectUniqueName": "D:\\Programming\\VisualStudio\\game_agar.io\\repozitoriy\\game_agar.io\\game_agar.io.csproj",
         "projectName": "game_agar.io",
-        "projectPath": "D:\\Programming\\VisualStudio\\game_agar.io\\game_agar.io\\game_agar.io.csproj",
+        "projectPath": "D:\\Programming\\VisualStudio\\game_agar.io\\repozitoriy\\game_agar.io\\game_agar.io.csproj",
         "packagesPath": "C:\\Users\\Kseniya1\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\VisualStudio\\game_agar.io\\game_agar.io\\obj\\",
+        "outputPath": "D:\\Programming\\VisualStudio\\game_agar.io\\repozitoriy\\game_agar.io\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kseniya1\\AppData\\Roaming\\NuGet\\NuGet.Config",

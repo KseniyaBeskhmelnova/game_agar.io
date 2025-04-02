@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UlVUgAmLZpkbBAsmgw8bfd1gTCttK7jvsfzKhdUwyWMDXEFW6jBvlC9gW+xDrkqZ8cHRzWiL9wg6RsBtdMrOFQ==",
+  "dgSpecHash": "+5S5rJyGNKJTeP/dYqdCRs0sWArxg5oBFacYlipFH1SpKMFnygJnUxe4AqbLJED6I2B5ZbstmFVrGIFD/Y+QbQ==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\VisualStudio\\game_agar.io\\game_agar.io\\game_agar.io.csproj",
+  "projectFilePath": "D:\\Programming\\VisualStudio\\game_agar.io\\repozitoriy\\game_agar.io\\game_agar.io.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kseniya1\\.nuget\\packages\\opentk\\4.8.2\\opentk.4.8.2.nupkg.sha512",
     "C:\\Users\\Kseniya1\\.nuget\\packages\\opentk.audio.openal\\4.8.2\\opentk.audio.openal.4.8.2.nupkg.sha512",

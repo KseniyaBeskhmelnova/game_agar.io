@@ -251,51 +251,52 @@ namespace game_agar.io
 
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
-            base.OnUpdateFrame(e);
-            var input = KeyboardState;
-            if (input.IsKeyDown(Keys.Escape))
+            int minDistIndex = 0;
+            double minDist = 99999;
+            for (int i = 0; i < sphereListCount; i++)
             {
-                Close();
+                float x = (sphereListDx + sphereList[i].X) % sphereListRepeatDist - (sphereListRepeatDist / 2.0f);
+                float y = (sphereListDy + sphereList[i].Y) % sphereListRepeatDist - (sphereListRepeatDist / 2.0f);
+                double dist = Math.Sqrt(x * x + y * y);
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    minDistIndex = i;
+                }
             }
-            if (input.IsKeyDown(Keys.Left))
+            float xx = (sphereListDx + sphereList[minDistIndex].X) % sphereListRepeatDist - (sphereListRepeatDist / 2.0f);
+            float yy = (sphereListDy + sphereList[minDistIndex].Y) % sphereListRepeatDist - (sphereListRepeatDist / 2.0f);
+
+            if (xx != 0)
             {
-                sphereListDx += sphereListDxDyStep;
+                sphereListDx += (xx < 0) ? +sphereListDxDyStep : -sphereListDxDyStep;
                 if (sphereListDx >= sphereListRepeatDist)
                 {
                     sphereListDx -= sphereListRepeatDist;
                 }
+                if (sphereListDx < 0.0f)
+                {
+                    sphereListDx += sphereListRepeatDist;
+                }
                 Matrix4 rotateLocal = Matrix4.CreateRotationY(MathHelper.DegreesToRadians(-sphereRotStep));
                 rotate *= rotateLocal;
             }
-            if (input.IsKeyDown(Keys.Right))
+
+            if (yy != 0)
             {
-                sphereListDx -= sphereListDxDyStep;
-                if (sphereListDx < 0.0f) {
-                    sphereListDx += sphereListRepeatDist;
-                }
-                Matrix4 rotateLocal = Matrix4.CreateRotationY(MathHelper.DegreesToRadians(sphereRotStep));
-                rotate *= rotateLocal;
-            }
-            if (input.IsKeyDown(Keys.Down))
-            {
-                sphereListDy += sphereListDxDyStep;
+                sphereListDy += (yy < 0) ? +sphereListDxDyStep : -sphereListDxDyStep;
                 if (sphereListDy >= sphereListRepeatDist)
                 {
                     sphereListDy -= sphereListRepeatDist;
                 }
-                Matrix4 rotateLocal = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(sphereRotStep));
-                rotate *= rotateLocal;
-            }
-            if (input.IsKeyDown(Keys.Up))
-            {
-                sphereListDy -= sphereListDxDyStep;
                 if (sphereListDy < 0.0f)
                 {
                     sphereListDy += sphereListRepeatDist;
                 }
-                Matrix4 rotateLocal = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(-sphereRotStep));
+                Matrix4 rotateLocal = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(sphereRotStep));
                 rotate *= rotateLocal;
             }
+            base.OnUpdateFrame(e);
         }
 
         //Function to load a text file and return its contests as a string
